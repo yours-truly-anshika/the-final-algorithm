@@ -64,7 +64,7 @@ body {
   right: 0;
   margin: auto;
   transform: rotate(-47deg) skewY(20deg) skewX(18deg);
-  background-color: skyblue;
+  background-color: var(--sky-blue);
   opacity: 0.5;
   z-index: 2;
 }
