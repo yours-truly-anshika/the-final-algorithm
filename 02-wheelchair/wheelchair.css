@@ -1,0 +1,88 @@
+:root {
+  --container-width: min(30vmin, 150px);
+  --container-height: min(30vmin, 150px);
+  --ash-grey : #afbb9b;
+  --dark-blue: #021e3a;
+  --light-blue: #4477c9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ash-grey);
+}
+
+.container {
+  position: relative;
+  width: var(--container-width);
+  height: var(--container-height);
+}
+
+.shape {
+  position: absolute;
+}
+
+.wheel {
+  width: calc(var(--container-width) / 2);
+  height: calc(var(--container-height) / 2);
+  background: var(--dark-blue);
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.wheel .inner-circle {
+  width: calc(var(--container-width) * 0.3);
+  height: calc(var(--container-height) * 0.3);
+  border: calc(var(--container-height) * 0.1) solid var(--light-blue);
+  background: transparent;
+  border-radius: 50%;
+}
+
+.torso {
+  width: calc(var(--container-width) * 0.2);
+  height: calc(var(--container-height) * 0.6);
+  background: var(--dark-blue);
+  left: calc(var(--container-width) * 0.25);
+  bottom: calc(var(--container-height) * 0.25);
+}
+
+.leg {
+  width: calc(var(--container-width) * 0.4);
+  height: calc(var(--container-height) * 0.4);
+  background: transparent;
+  left: calc(var(--container-width) * 0.3);
+  bottom: calc(var(--container-height) * 0.1);
+  border: calc(var(--container-width) * 0.1) solid var(--dark-blue);
+  border-top-right-radius: 40%;
+}
+
+.head {
+  width: calc(var(--container-width) * 0.2);
+  height: calc(var(--container-height) * 0.2);
+  background: var(--dark-blue);
+  border-radius: 50%;
+  top: calc(-0.5 * var(--container-height) * 0.1);
+  left: calc(var(--container-width) * 0.25);
+}
+
+.seat {
+  width: calc(var(--container-width) * 0.1);
+  height: calc(var(--container-height) * 0.6);
+  background: var(--dark-blue);
+  left: calc(var(--container-width) * 0.1);
+  bottom: calc(var(--container-height) * 0.15);
+}
